@@ -7,6 +7,10 @@ RUN apt-get update
 # Install java
 RUN apt-get install --yes --fix-missing openjdk-8-jre
 
+# Install Python
+RUN apt-get install --yes python3
+RUN apt-get install --yes python3-pip
+
 # Install Sonar Scanner
 RUN apt-get install --yes wget
 RUN apt-get install --yes zip
