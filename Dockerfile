@@ -8,11 +8,13 @@ RUN apt-get update
 RUN apt-get install --yes --fix-missing openjdk-8-jre
 
 # Install Python
-RUN apt-get install --yes python3.7
+RUN apt-get install --yes python3
 RUN apt-get install --yes python3-pip
 
 
 # Install pytest
+RUN apt-get purge --yes python-bson
+RUN apt-get install --yes python-bson
 RUN pip3 install pytest
 
 # Install Sonar Scanner
