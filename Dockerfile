@@ -11,8 +11,11 @@ RUN apt-get install --yes --fix-missing openjdk-8-jre
 RUN apt-get install --yes python3
 RUN apt-get install --yes python3-pip
 
-# Instally pytest
+# Install pytest
 RUN pip3 install pytest
+
+# Install git
+RUN apt-get install --yes git-core
 
 # Install Sonar Scanner
 RUN apt-get install --yes wget
