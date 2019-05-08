@@ -17,6 +17,9 @@ RUN pip3 install pytest
 # Install git
 RUN apt-get install --yes git-core
 
+# Install Node, NPM, Yarn
+RUN apt-get install --yes nodejs npm yarn
+
 # Install Sonar Scanner
 RUN apt-get install --yes wget
 RUN apt-get install --yes zip
